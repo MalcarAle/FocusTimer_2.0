@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*-------------FONTS---------------*/
+  font-size: 62.5%;
+  --ff-text: "Roboto", sans-serif;
+
+  /*-------------COLORS-------------*/
+  --fc-text: #323238;
+  --bg-color: #ffffff;
+  --bg-button: #e1e1e6;
+  --bg-button0-hover: #1a91b6;
+  --icon-color: black;
+  --icon-hover-color: white;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 82.1rem;
+  height: 33.6rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+button svg {
+  width: clamp(2rem, 3rem + 3vw, 4.8rem);
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#timer {
+  width: 32.1rem;
+  height: 21.3rem;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#time {
+  display: flex;
+  font-size: clamp(6rem, 6rem + 10vw, 12.6rem);
+  line-height: 14.8rem;
+  font-family: var(--ff-text);
+  color: var(--fc-text);
+  margin-bottom: 0;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+
+  border-radius: 9999px;
+}
+
+#sounds {
+  width: 30.8rem;
+  height: 33.6rem;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 3.2rem;
+}
+
+#sounds .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-button);
+  border-radius: 2.4rem;
+
+  width: clamp(6.5rem, 6.5rem + 10vw, 13.8rem);
+  height: clamp(7.5rem, 7.5rem + 10vw, 15.2rem);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#sounds .card:hover {
+  background-color: var(--bg-button0-hover);
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.card:hover svg path {
+  fill: white;
+}
+
+#sounds .select,
+.select svg path {
+  background-color: var(--bg-button0-hover);
+  fill: white;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #timer {
+    width: 100%;
+    height: auto;
+  }
+
+  #sounds {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+
+  #sounds .card {
+    width: clamp(6.5rem, 10rem + 10vw, 17.8rem);
+    height: clamp(7.5rem, 10rem + 10vw, 15.2rem);
+  }
+}
