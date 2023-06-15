@@ -1,5 +1,6 @@
 {
   "editor.wordWrap": "on",
+  "editor.tabSize": 2,
   "editor.fontFamily": "JetBrains Mono",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
@@ -13,7 +14,7 @@
   // workbench
   "workbench.editor.enablePreview": true,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Omni",
+  "workbench.colorTheme": "One Dark Pro",
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.enable": true,
