@@ -8,6 +8,8 @@ import {
   btnFirePlace,
   btnForest,
   btnRain,
+  buttonDarkMode,
+  buttonLightMode,
 } from "./elements.js"
 
 export default function ({ controls, sound, timer }) {
@@ -22,6 +24,12 @@ export default function ({ controls, sound, timer }) {
     removeSelection()
 
     card.classList.add("select")
+  }
+
+  function changeView() {
+    buttonLightMode.classList.toggle("hide")
+    buttonDarkMode.classList.toggle("hide")
+    document.querySelector("html").classList.toggle("light")
   }
 
   btnPlay.addEventListener("click", () => {
@@ -93,5 +101,13 @@ export default function ({ controls, sound, timer }) {
       return
     }
     removeSelection()
+  })
+
+  buttonLightMode.addEventListener("click", () => {
+    changeView()
+  })
+
+  buttonDarkMode.addEventListener("click", () => {
+    changeView()
   })
 }

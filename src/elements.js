@@ -4,6 +4,8 @@ const btnPause = document.querySelector(".pause")
 const btnStop = document.querySelector(".stop")
 const btnPlus = document.querySelector(".plus")
 const btnMinus = document.querySelector(".minus")
+const buttonLightMode = document.querySelector(".light-mode")
+const buttonDarkMode = document.querySelector(".dark-mode")
 
 /* BUTTON SOUND */
 const btnForest = document.querySelector(".forest")
@@ -27,4 +29,6 @@ export {
   btnRain,
   minutesDisplay,
   secondsDisplay,
+  buttonDarkMode,
+  buttonLightMode,
 }
